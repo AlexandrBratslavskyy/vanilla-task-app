@@ -6,9 +6,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" type="text/css" href="task.css" />
-		<script defer type="text\javascript" src="task.js"></script>
+		<script defer src="task.js"></script>
 	</head>
-	<body>
-		Hello, World
+	<body onload="createAllTasks();">
+		<section id="taskList">
+			<article id="test">
+				<div>Hello, World</div>
+				<img src="img/not-done-ring-round.svg" alt="doneBtn" />
+				<img src="img/close-square-svgrepo-com.svg" alt="delBtn" />
+			</article>
+		</section>
+		<form onsubmit="addTask(this); return false;" action="#">
+			<h1>Add a Task</h1>
+			<label for="name">Task Name: </label>
+			<input
+				type="text"
+				name="name"
+				id="name"
+				placeholder="Task Name"
+				required
+			/>
+			<br />
+			<button type="submit">Add Task</button>
+		</form>
 	</body>
 </html>
